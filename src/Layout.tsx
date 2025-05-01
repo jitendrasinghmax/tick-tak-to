@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useTheme } from "./useTheme"
 import { Home } from "./home"
 import { styles } from "./style"

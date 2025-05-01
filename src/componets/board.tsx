@@ -1,14 +1,12 @@
-import { useRecoilState, useRecoilValue, useRecoilValueLoadable } from "recoil"
-import { canSelectAtom, checkWinnerSelector, gameStartedAtom, matrixAtom, metaDataAtom } from "../store/board"
+import { useRecoilState, useRecoilValue } from "recoil"
+import { canSelectAtom, gameStartedAtom, matrixAtom, metaDataAtom } from "../store/board"
 import Square from "./square";
-import { themeAtom } from "../store/theme";
-import { styles } from "../style";
+
 import { useEffect, useState } from "react";
 import socket from "./socket";
 import { useNavigate } from "react-router-dom";
 export const Board = () => {
     const [board,setBoard] = useRecoilState(matrixAtom);
-    const winnerSelector=useRecoilValue(checkWinnerSelector);
     const gameStarted=useRecoilValue(gameStartedAtom)
     const metaData=useRecoilValue(metaDataAtom);
     const [canSelect,setCanSelect]=useRecoilState(canSelectAtom)

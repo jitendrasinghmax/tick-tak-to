@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue } from "recoil"
+import {  useRecoilValue, useSetRecoilState } from "recoil"
 import { styles } from "../style"
 import { themeAtom } from "../store/theme"
 import socket from "./socket"
@@ -7,7 +7,7 @@ import { metaDataAtom } from "../store/board"
 import { useNavigate } from "react-router-dom"
 export const CreateRoom = () => {
     const theme = useRecoilValue(themeAtom);
-    const [metaData, setMetaData] = useRecoilState(metaDataAtom);
+    const setMetaData = useSetRecoilState(metaDataAtom);
     const [inputRoomId,setInputroomId]=useState<string>("");
     const [InputName,setInputName]=useState<string>("");
     const navigate=useNavigate();

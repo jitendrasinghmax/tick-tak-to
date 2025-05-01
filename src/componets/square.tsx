@@ -1,6 +1,6 @@
 import React from 'react';
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { canSelectAtom, matrixAtom, metaDataAtom } from '../store/board';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { canSelectAtom, metaDataAtom } from '../store/board';
 import socket from './socket';
 
 interface SquareProps {
